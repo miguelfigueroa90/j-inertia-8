@@ -4307,10 +4307,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  props: {
+    notes: Array
   }
 });
 
@@ -32963,10 +32987,66 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "text-sm text-gray-600" }, [
-                  _vm._v(
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est nostrum fugit doloremque at veniam voluptatibus voluptatem nemo et eaque nisi ratione debitis architecto fuga, quam consequuntur, eius animi perferendis!"
-                  )
+                  _vm._v("Take the correct record and execute ")
                 ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "md:col-span-2 mt-5 md:mt-0" }, [
+              _c("div", { staticClass: "shadow bg-white md:rounded-md p-4" }, [
+                _c(
+                  "table",
+                  _vm._l(_vm.notes, function(note) {
+                    return _c("tr", [
+                      _c("td", { staticClass: "border px-4 py-2" }, [
+                        _vm._v(
+                          "\n                                    " +
+                            _vm._s(note.excerpt) +
+                            "\n                                "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "px-4 py-2" },
+                        [
+                          _c(
+                            "inertia-link",
+                            {
+                              attrs: { href: _vm.route("notes.show", note.id) }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        View\n                                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "td",
+                        { staticClass: "px-4 py-2" },
+                        [
+                          _c(
+                            "inertia-link",
+                            {
+                              attrs: { href: _vm.route("notes.edit", note.id) }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        Edit\n                                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  }),
+                  0
+                )
               ])
             ])
           ])
