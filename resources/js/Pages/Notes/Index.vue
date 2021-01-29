@@ -12,7 +12,7 @@
                     <div class="md:col-span-1">
                         <div class="px-4 sm:px0">
                             <h3 class="text-lg text-gray-900">Note list</h3>
-                            <p class="text-sm text-gray-600">Take the correct record and execute </p>
+                            <p class="text-sm text-gray-600">Take the correct record and execute an action (View, Edit...)</p>
                         </div>
                     </div>
                     <div class="md:col-span-2 mt-5 md:mt-0">
