@@ -38,6 +38,12 @@
                                     Edit
                                 </button>
                             </form>
+
+                            <hr class="my-6">
+
+                            <a href="#" @click.prevent="destroy">
+                                Delete
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -67,6 +73,11 @@
         methods: {
             submit() {
                 this.$inertia.put(this.route('notes.update', this.note.id), this.form)
+            },
+            destroy() {
+                if (confirm('Do you want to delete this record?')) {
+                    this.$inertia.delete(this.route('notes.destroy', this.note.id))
+                }
             }
         }
     }
